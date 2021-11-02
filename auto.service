@@ -1,0 +1,13 @@
+[Unit]
+Description=olehsservice
+After=network.target
+
+[Service]
+Type=forking
+User=root
+ExecStart=/home/olehnykon/Desktop/ftp_scripts/put_script.sh
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
